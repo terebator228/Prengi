@@ -1,0 +1,53 @@
+.main {
+    position: relative;
+    min-height: 700px;
+    padding: 39px 0 68px 0;
+    background: url('../img/bg.png') center center/cover no-repeat;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        img {
+            max-width: 140px;
+        }
+    }
+    &__links {
+        a {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+            margin-left: 40px;
+        }
+    }
+    &__descr {
+        margin-top: 133px;
+    }
+    &__big-text {
+        width: 524px;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+    &__small-text {
+        width: 426px;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 30px;
+        span {
+            font-weight: 400;
+        }
+    }
+    &__phones {
+        position: absolute;
+        bottom: 0;
+        right: 16%;
+    }
+}

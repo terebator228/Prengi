@@ -1,0 +1,28 @@
+.header {
+    min-height: 85px;
+    padding: 18px 0 16px 0;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        &-item {
+            display: flex;
+        }
+    }
+    &__flag {
+        height: 21px;
+        margin-right: 11px;
+        margin-top: 2px;
+    }
+    &__descr {
+        color: #242424;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        span {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}

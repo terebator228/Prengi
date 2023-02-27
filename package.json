@@ -27,5 +27,13 @@
   ],
   "dependencies": {
     "gulp-htmlmin": "^5.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terebator228/Prengi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/terebator228/Prengi/issues"
+  },
+  "homepage": "https://github.com/terebator228/Prengi#readme"
 }
