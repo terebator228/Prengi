@@ -1,0 +1,41 @@
+.withUs {
+    padding: 79px 0 81px 0;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 360px;
+        height: 255px;
+        background: url('../../img/cardBg.png') center center/cover no-repeat;
+        &-img {
+            display: block;
+            margin: 0 auto;
+        }
+        &-text {
+            width: 238px;
+            color: #393939;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+            text-align: center;
+            margin: 0 auto;
+            &_bold {
+                font-weight: 700;
+            }
+        }
+    }
+    &__arrow {
+        display: block;
+        margin: 50px auto 55px auto;
+    }
+    &__title {
+        color: #393939;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 30.04px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 37px;
+    }
+}
