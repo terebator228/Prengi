@@ -13,3 +13,20 @@
         text-transform: uppercase;
     }
 }
+.arrow-right, .arrow-left {
+    position: absolute;
+    border: none;
+    background: none;
+}
+
+.arrow-right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.arrow-left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}

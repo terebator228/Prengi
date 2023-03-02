@@ -1,102 +1,56 @@
-$(document).ready(function(){
-    
+'use strict'
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const hamburger_menu = document.querySelector('.hamburger-menu'),
-        menuItem = document.querySelectorAll('.menu_item'),
-        hamburger = document.querySelector('.hamburger');
-    
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger_active');
-            hamburger_menu.classList.toggle('hamburger-menu_active');
-        });
-    
-        menuItem.forEach(item => {
-            item.addEventListener('click', () => {
-                hamburger.classList.toggle('hamburger_active');
-                hamburger_menu.classList.toggle('hamburger-menu_active');
-            })
-        })
-    })
+const card = document.querySelectorAll('.solutions__slider-card'),
+      tabs = document.querySelectorAll('.solutions__link'),
+      arrowLeft = document.querySelector('.arrow-left'),
+      arrowRight = document.querySelector('.arrow-right');
 
-function valideForms(form) {
-    $(form).validate({
-        rules: {
-            name: 'required',
-            phone: 'required',
-            email: {
-                required: true,
-                email: true,
-            },
-        },
-        messages: {
-            name: "Пожалуйста, введите свое имя",
-            phone: "Пожалуйста, введите свой номер телефона",
-            email: {
-              required: "Пожалуйста, введите свой почту",
-              email: "Неправильно введен адрес почты"
-            }
-          }
-        
+function hideCard() {
+    card.forEach((item) => {
+        item.classList.add('solutions__slider-card_hide');
+        item.classList.remove('solutions__slider-card_show');
+    });
+    tabs.forEach(item => {
+        item.classList.remove('solutions__link_active');
     })
 }
 
-valideForms('#consulting-form');
-valideForms('#consultation form');
-valideForms('#order form');
-
-$('input[name=phone]').mask("+7 (999) 999-99-99");
-
-$('form').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "mailer/smart.php",
-        data: $(this).serialize()
-    }).done(function() {
-        $(this).find("input").val("");
+function showCard(i = 0) {
+    card[i].classList.add('solutions__slider-card_show', 'fade');
+    card[i].classList.remove('solutions__slider-card_hide');
+    tabs[i].classList.add('solutions__link_active');
+}
 
 
-        $('form').trigger('reset');
-    });
-    return false;
-});
+hideCard();
+showCard();
 
-const slider = tns({
-    container: '.reviews__inner',
-    items: 1,
-    slideBy: 'page',
-    autoplay: false,
-    controls: false,
-    responsive: {
-        320: {
-            nav: true,
-            mouseDrag: true
-        },
-        640: {
-          edgePadding: 20,
-          gutter: 20,
-          items: 1
-        },
-        700: {
-          gutter: 30
-        },
-        900: {
-          items: 1,
-          nav: false,
+tabs.forEach((item, i) => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        const target = event.target;
+        if(target == item) {
+            hideCard();
+            showCard(i);
         }
-      }
-});
+    })
+})
 
+arrowLeft.addEventListener('click', e => {
+    tabs.forEach((item, i) => {
+        if(item.classList.contains('solutions__link_active') && i > 0) {
+            hideCard();
+            showCard(i - 1);
+        }
+    })
+})
 
-
-document.querySelector('.prev').addEventListener('click',function () {
-    slider.goTo('prev');
-});
-
-document.querySelector('.next').addEventListener('click',function () {
-    slider.goTo('next');
-});
-
-
-});
+arrowRight.addEventListener('click', e => {
+    for(let i = 0; i < tabs.length - 1; i++) {
+        if (tabs[i].classList.contains('solutions__link_active') && i >= 0) {
+            hideCard();
+            showCard(i + 1);
+            return
+        }
+    }
+})
