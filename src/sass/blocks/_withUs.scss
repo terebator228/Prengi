@@ -8,9 +8,11 @@
         width: 360px;
         height: 255px;
         background: url('../../img/cardBg.png') center center/cover no-repeat;
+        padding-top: 30px;
         &-img {
             display: block;
             margin: 0 auto;
+            margin-bottom: 20px;
         }
         &-text {
             width: 238px;

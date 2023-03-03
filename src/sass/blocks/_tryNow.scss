@@ -1,0 +1,24 @@
+.tryNow {
+    padding: 80px 0;
+    &__border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 302px;
+        height: 302px;
+        background: url('../icons/border.png') center center/cover no-repeat;
+        margin: 0 auto;
+        margin-bottom: 74px;
+    }
+    &__img {
+        width: 79%;
+    }
+    &__title {
+        color: #393939;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
