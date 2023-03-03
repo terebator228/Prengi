@@ -1,0 +1,84 @@
+.options {
+    position: relative;
+    z-index: 1;
+    &__title {
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35.99px;
+        text-align: center;
+        z-index: 20;
+    }
+    &__wrap {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 50%);
+    }
+    &__item {
+        position: relative;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        z-index: 2;
+    }
+    &__storage {
+        max-width: 483px;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        right: 82px;
+    }
+    &__name {
+        position: relative;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: right;
+        z-index: 100;
+    }
+    &__descr {
+        position: relative;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        text-align: right;
+        z-index: 100;
+    }
+    .options__storage::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 167px;
+        height: 167px;
+        background-color: rgba($color: #00c2f0, $alpha: .3);
+        top: -40%;
+        right: -49px;
+        z-index: 19;
+    }
+    .options__item:nth-child(even) .options__storage {
+        left: 82px;
+    }
+    .options__item:nth-child(even) .options__descr, .options__item:nth-child(even) .options__name {
+        text-align: left;
+    }
+    .options__item:nth-child(even) .options__storage::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 167px;
+        height: 167px;
+        background-color: rgba($color: #00c2f0, $alpha: .3);
+        top: -40%;
+        left: -49px;
+        z-index: 19;
+    }
+}

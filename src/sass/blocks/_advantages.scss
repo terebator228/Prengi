@@ -5,6 +5,14 @@
         justify-content: center;
         grid-template-columns: repeat(2,minmax(320px, 570px));
     }
+    &__title {
+        color: #393939;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 35.99px;
+        text-align: center;
+        margin-bottom: 44px;
+    }
     &__item {
         width: 100%;
         position: relative;
