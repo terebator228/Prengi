@@ -1,14 +1,17 @@
 .withUs {
     padding: 79px 0 81px 0;
     &__wrap {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 360px));
+        gap: 10px;
         justify-content: space-between;
     }
     &__card {
-        width: 360px;
-        height: 255px;
+        min-height: 255px;
         background: url('../../img/cardBg.png') center center/cover no-repeat;
         padding-top: 30px;
+        border: 1px solid #ececec;
+        border-radius: 5px;
         &-img {
             display: block;
             margin: 0 auto;
