@@ -2,8 +2,10 @@
     min-height: 85px;
     padding: 18px 0 16px 0;
     &__list {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 170px);
+        grid-gap: 10px;
+        justify-content: center;
         list-style-type: none;
         margin: 0;
         &-item {
@@ -26,3 +28,4 @@
         }
     }
 }
+

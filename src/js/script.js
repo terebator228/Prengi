@@ -54,3 +54,25 @@ arrowRight.addEventListener('click', e => {
         }
     }
 })
+
+// hamburger menu
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMmenu = document.querySelector('.hamburger-menu'),
+    hamburger = document.querySelector('.hamburger'),
+    hamburgerWrap = document.querySelector('.hamburger-wrap');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        hamburgerMmenu.classList.toggle('hamburger-menu_active');
+        hamburgerWrap.classList.toggle('hamburger-wrap_active');
+    });
+
+    hamburgerWrap.addEventListener('click', (e) => {
+        if (e.target === hamburgerWrap) {
+            hamburger.classList.toggle('hamburger_active');
+            hamburgerMmenu.classList.toggle('hamburger-menu_active');
+            hamburgerWrap.classList.toggle('hamburger-wrap_active');
+        }
+    });
+})
