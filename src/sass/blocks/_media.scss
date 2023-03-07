@@ -1,3 +1,4 @@
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px
@@ -8,6 +9,18 @@
             img {
                 width: 90%;
             }
+        }
+    }
+    .options {
+        &__title {
+            top: 8%;
+        }
+        &__name {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        &__descr {
+            font-size: 16px;
         }
     }
 }
@@ -47,6 +60,36 @@
     .advantages {
         &__text {
             font-size: 20px;
+        }
+    }
+    .options {
+        .options__item:nth-child(2n) .options__name::after {
+            width: 150px;
+            height: 150px;
+        }
+        .options__name::after {
+            width: 150px;
+            height: 150px;
+          }
+        &__title {
+            font-size: 25px;
+        }
+        &__name {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &__descr {
+            font-size: 14px;
+            
+        }
+    }
+    .footer {
+        &__item {
+            margin-right: 10px;
+            max-width: 250px;
+        }
+        .footer__item:last-child {
+            margin: 0;
         }
     }
 }
@@ -119,6 +162,24 @@
         &__text {
             font-size: 15px;
             height: 100px;
+        }
+    }
+    .options {
+        &__wrap {
+            grid-template-columns: repeat(1,100%);
+        }
+        &__title {
+            top: 4%;
+        }
+        &__item {
+            img {
+                height: 400px;
+            }
+        }
+    }
+    .footer {
+        .footer__item:first-child {
+            display: none;
         }
     }
 }
@@ -199,6 +260,25 @@
         &__text {
             font-size: 20px;
             height: 50%;
+        }
+    }
+    .options {
+        &__wrap {
+            grid-template-columns: repeat(1,100%);
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__item {
+            img {
+                height: 400px;
+            }
+        }
+        &__storage {
+            right: 60px;
+        }
+        .options__item:nth-child(2n) .options__storage {
+            left: 60px;
         }
     }
 }
